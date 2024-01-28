@@ -14,7 +14,7 @@ export default function BottomNav() {
         >
           <IoLogoLinkedin className="cursor-pointer w-8 h-8 m-5" />
         </Link>
-        <Link href="https://github.com/iynes">
+        <Link href="https://github.com/Artemiskgg1">
           <AiFillGithub className="cursor-pointer w-8 h-8 m-5" />
         </Link>
       </div>
