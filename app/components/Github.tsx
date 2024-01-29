@@ -24,13 +24,13 @@ function Github() {
         transition={{ delay: 1, duration: 1 }}
       >
         <GitHubCalendar
-          username="iynes"
+          username="Artemiskgg1"
           blockSize={15}
           blockMargin={5}
           fontSize={16}
           theme={{
-            light: ["#1F2937", "#374151", "#4B5563", "#9CA3AF", "#D1D5DB"], // Dark to light blueish-gray shades
-            dark: ["#1F2937", "#374151", "#4B5563", "#9CA3AF", "#D1D5DB"],
+            light: ["#1F2937", "#374151", "#4B5563", "#9CA3AF", "#D1D5DB"],
+            dark: ["#0F172A", "#374151", "#4B5563", "#9CA3AF", "#D1D5DB"],
           }}
         />
       </motion.div>
