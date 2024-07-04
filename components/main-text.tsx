@@ -18,11 +18,11 @@ export function MainText() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-2xl px-4 md:text-4xl lg:text-5xl font-boldtext-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+        className="text-2xl px-4 md:text-xl lg:text-5xl font-boldtext-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
         Greetings!
-        <br /> I am <Highlight className="text-white">Abha Ghildiyal</Highlight>
-        .
+        <br /> I am{" "}
+        <Highlight className="text-whit-200">Abha Ghildiyal</Highlight>.
       </motion.h1>
     </HeroHighlight>
   );

@@ -1,5 +1,6 @@
 import { MainText } from "@/components/main-text";
 import { Spotlight } from "@/components/ui/spotlight";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import React from "react";
 
 const Hero = () => {
@@ -27,6 +28,10 @@ const Hero = () => {
           <div>
             <MainText />
           </div>
+          <TextGenerateEffect
+            className="text-center text-[40px] md:text-5xl lg:text-6xl "
+            words="Bridging Imagination into Seamless Experiences"
+          />
         </div>
       </div>
     </div>
