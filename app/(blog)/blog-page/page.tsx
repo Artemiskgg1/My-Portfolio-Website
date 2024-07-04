@@ -22,7 +22,7 @@ export default async function BlogPage() {
   return (
     <div className="mt-[11.5rem] grid-cols-1 grid lg:grid-cols-2 gap-5">
       {data.map((post, idx) => (
-        <Card key={idx}>
+        <Card key={idx} className="bg-white-200">
           <Image
             src={urlFor(post.titleImage).url()}
             alt="img"
