@@ -25,7 +25,7 @@ export default function NavBar() {
   return (
     <div
       className={`fixed h-[11.5rem] top-0 left-0 w-full z-50 transition-all ${
-        isScrolled ? "bg-opacity-90 bg-zinc-950" : "bg-opacity-0"
+        isScrolled ? "bg-opacity-90 bg-black-100 " : " bg-opacity-10"
       }`}
     >
       <div className="relative">
