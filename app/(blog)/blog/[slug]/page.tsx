@@ -23,7 +23,9 @@ export default async function BlogArticle({
 }) {
   const data: fullBlog = await getData(params.slug);
   return (
-    <div className="mt-8">
+    <div className="mt-[11.5rem]">
+      {" "}
+      {/* Add a top margin to ensure content doesn't overlap with the navbar */}
       <h1>
         <span className="block text-base text-primary font-semibold tracking-wide uppercase">
           Abha Ghildiyal - Blog
