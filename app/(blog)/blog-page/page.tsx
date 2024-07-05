@@ -20,27 +20,29 @@ async function getData() {
 export default async function BlogPage() {
   const data = await getData();
   return (
-    <div className="mt-[11.5rem] grid-cols-1 grid lg:grid-cols-2 gap-5">
-      {data.map((post, idx) => (
-        <Card key={idx} className="bg-white-200">
-          <Image
-            src={urlFor(post.titleImage).url()}
-            alt="img"
-            width={500}
-            height={500}
-            className="rounded-t-lg h-[200px] object-cover"
-          />
-          <CardContent className="mt-5">
-            <h3 className="text-lg line-clamp-2 font-bold">{post.title}</h3>
-            <p className="text-sm text-zinc-600 line-clamp-3 dark:text-zinc-400">
-              {post.smallDescription}
-            </p>
-            <Button asChild className="w-full mt-7">
-              <Link href={`/blog/${post.currentSlug}`}>Read More</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
+    <div className="container mx-auto px-4 py-8 relative z-20">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        {data.map((post, idx) => (
+          <Card key={idx} className="bg-white-200">
+            <Image
+              src={urlFor(post.titleImage).url()}
+              alt="img"
+              width={500}
+              height={500}
+              className="rounded-t-lg h-[200px] object-cover"
+            />
+            <CardContent className="mt-5">
+              <h3 className="text-lg line-clamp-2 font-bold">{post.title}</h3>
+              <p className="text-sm text-zinc-600 line-clamp-3 dark:text-zinc-400">
+                {post.smallDescription}
+              </p>
+              <Button asChild className="w-full mt-7">
+                <Link href={`/blog/${post.currentSlug}`}>Read More</Link>
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

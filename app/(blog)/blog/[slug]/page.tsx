@@ -6,12 +6,12 @@ import Image from "next/image";
 async function getData(slug: string) {
   const query = `
     *[_type == 'blog' && slug.current == '${slug}'] {
-        "currentSlug":slug.current,
-        title,
-        content,
-        titleImage
-    }[0]`;
-
+      "currentSlug":slug.current,
+      title,
+      content,
+      titleImage
+    }[0]
+  `;
   const data = await client.fetch(query);
   return data;
 }
@@ -23,14 +23,9 @@ export default async function BlogArticle({
 }) {
   const data: fullBlog = await getData(params.slug);
   return (
-    <div className="mt-[11.5rem]">
-      {" "}
-      {/* Add a top margin to ensure content doesn't overlap with the navbar */}
+    <div className="w-[50rem]">
       <h1>
-        <span className="block text-base text-primary font-semibold tracking-wide uppercase">
-          Abha Ghildiyal - Blog
-        </span>
-        <span className="block mt-2 text-3xl text-center leading-8 tracking-tight sm:text-4xl">
+        <span className=" block mt-2 text-3xl text-center leading-8 tracking-tight sm:text-4xl">
           {data.title}
         </span>
       </h1>
