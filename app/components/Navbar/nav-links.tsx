@@ -12,11 +12,9 @@ export default function NavLinks() {
   const pathname = usePathname();
 
   const isActive = (path: string) => {
-    // Check for exact match for the Projects link
     if (path === "/projects") {
       return pathname === path;
     }
-    // Check for Blog link (including subpaths like /blog/[slug])
     if (path === "/blog-page") {
       return pathname.startsWith("/blog");
     }

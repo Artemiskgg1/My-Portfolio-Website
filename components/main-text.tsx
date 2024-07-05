@@ -18,11 +18,12 @@ export function MainText() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-2xl px-4 md:text-xl lg:text-5xl font-boldtext-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+        className=" mb-24 text-2xl md:text-xl lg:text-5xl font-boldtext-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
-        Greetings!
-        <br /> I am{" "}
-        <Highlight className="text-whit-200">Abha Ghildiyal</Highlight>.
+        <span className=" text-7xl">
+          <br /> I am{" "}
+          <Highlight className="text-white-200">Abha Ghildiyal</Highlight>.
+        </span>
       </motion.h1>
     </HeroHighlight>
   );
