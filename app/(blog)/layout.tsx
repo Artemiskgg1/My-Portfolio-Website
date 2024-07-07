@@ -6,7 +6,7 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-start mt-[15rem]">
+    <div className="flex flex-col lg:flex-row items-center justify-center mt-[7rem]">
       <div className="w-full lg:w-1/4 p-5">
         <LeftSection />
       </div>

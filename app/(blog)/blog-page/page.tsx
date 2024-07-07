@@ -20,7 +20,7 @@ async function getData() {
 export default async function BlogPage() {
   const data = await getData();
   return (
-    <div className="container mx-auto px-4 py-8 relative z-20">
+    <div className="container mx-auto relative z-20">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {data.map((post, idx) => (
           <Card key={idx} className="bg-white-200">
