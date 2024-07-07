@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import { Spotlight } from "@/components/ui/spotlight";
+import BottomNav from "./components/bottom-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-black-100 text-zinc-200 pb-20 pt-36`}
+        className={`${inter.className} bg-black-100 text-zinc-200  pt-36`}
         style={{ overflowX: "hidden" }}
       >
         <div>
@@ -41,6 +42,7 @@ export default function RootLayout({
         </div>
         <Navbar />
         <main>{children}</main>
+        <BottomNav />
       </body>
     </html>
   );
