@@ -18,7 +18,7 @@ export function MainText() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className=" md:mb-24 text-2xl md:text-xl lg:text-5xl font-boldtext-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+        className=" md:mb-16 text-2xl md:text-xl lg:text-5xl font-boldtext-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
         <span className=" md:text-7xl text-4xl">
           <br /> I am{" "}
