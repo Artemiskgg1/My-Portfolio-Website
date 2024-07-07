@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import NavLinks from "./nav-links";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,10 +23,18 @@ export default function NavBar() {
     };
   }, []);
 
+  const navbarVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1, ease: "easeInOut" } },
+  };
+
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={navbarVariants}
       className={`fixed h-[11.5rem] top-0 left-0 w-full z-50 transition-all ${
-        isScrolled ? "bg-opacity-90 bg-black-100 " : " bg-opacity-10"
+        isScrolled ? "bg-opacity-90 bg-black-100" : "bg-opacity-10"
       }`}
     >
       <div className="relative">
@@ -67,6 +76,6 @@ export default function NavBar() {
           <NavLinks />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
