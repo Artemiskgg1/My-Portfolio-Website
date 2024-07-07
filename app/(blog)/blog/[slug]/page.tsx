@@ -23,7 +23,7 @@ export default async function BlogArticle({
 }) {
   const data: fullBlog = await getData(params.slug);
   return (
-    <div className="w-[50rem]">
+    <div className="w-[50rem] z-50">
       <h1>
         <span className=" block mt-2 text-3xl text-center leading-8 tracking-tight sm:text-4xl">
           {data.title}
