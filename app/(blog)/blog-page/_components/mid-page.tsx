@@ -22,17 +22,6 @@ export default async function MidPage() {
   const data = await getData();
   return (
     <div className="container ml-2 rounded-lg px-4 relative z-20 bg-black-100 max-h-screen overflow-y-auto">
-      <div className="flex gap-x-6 p-4">
-        <PiCodeThin className="md:text-[6rem] text-3xl text-zinc-50" />
-        <div>
-          <h1 className="md:text-5xl text-3xl mt-6 text-zinc-300">
-            Semicolon,{" "}
-            <span className="text-[1rem] md:text-3xl text-zinc-400">
-              A Dev Blog
-            </span>
-          </h1>
-        </div>
-      </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {data.map((post, idx) => (
           <Card key={idx} className="bg-white ">
