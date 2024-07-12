@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`${inter.className} bg-black-100 text-zinc-200  pt-36`}
         style={{ overflowX: "hidden" }}
       >
-        <div>
+        <div className="md:block hidden">
           <Spotlight
             className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
             fill="white"
