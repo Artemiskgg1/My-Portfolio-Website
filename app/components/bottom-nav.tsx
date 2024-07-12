@@ -18,10 +18,12 @@ export default function BottomNav() {
           <AiFillGithub className="cursor-pointer w-8 h-8 m-5" />
         </Link>
       </div>
-      <div className={`text-slate-400 mb-12`}>Created By Abha Ghildiyal</div>
+      <div className={`text-slate-400 mb-12 text-sm md:text-lg`}>
+        Created By Abha Ghildiyal
+      </div>
       <div className=" rotate-90 pb-16 mb-10">
         <span
-          className={`${juliusSansOne.className} text-slate-400 w-36 pb-16 mb-24`}
+          className={`${juliusSansOne.className} text-sm md:text-lg text-slate-400 w-36 pb-16 mb-24`}
         >
           ARTEMIS GARTH
         </span>
