@@ -88,7 +88,19 @@
   }
 }
 
-/* globals.css */
 body::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #464545;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
