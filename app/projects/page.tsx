@@ -1,14 +1,20 @@
 "use client";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import React from "react";
+import Github from "../components/Github";
 export default function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
+    <div>
+      <div className="max-w-5xl mx-auto px-8">
+        <HoverEffect items={projects} />
+      </div>
+      <div className="max-w-6xl mx-auto px-8">
+        <Github />
+      </div>
     </div>
   );
 }
-export const projects = [
+const projects = [
   {
     title: "Stripe",
     description:
