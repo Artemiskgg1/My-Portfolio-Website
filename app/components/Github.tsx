@@ -16,7 +16,7 @@ function Github() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        Days I <strong className="text-blue-500">Code</strong>
+        Days I <strong className="text-blue-400">Code</strong>
       </motion.h1>
       <motion.div
         initial={{ opacity: 0 }}
