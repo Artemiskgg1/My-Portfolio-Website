@@ -3,11 +3,6 @@ import GitHubCalendar from "react-github-calendar";
 import { motion } from "framer-motion";
 
 function Github() {
-  const explicitTheme = {
-    light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"], // Ensure 5 colors for maxLevel 4
-    dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"], // Ensure 5 colors for maxLevel 4
-  };
-
   return (
     <motion.div
       className="flex flex-col items-center justify-center pb-10"
@@ -34,8 +29,8 @@ function Github() {
           blockMargin={5}
           fontSize={16}
           theme={{
-            light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
-            dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
+            light: ["#1F2937", "#374151", "#4B5563", "#9CA3AF", "#D1D5DB"], // Dark to light blueish-gray shades
+            dark: ["#1F2937", "#374151", "#4B5563", "#9CA3AF", "#D1D5DB"],
           }}
         />
       </motion.div>
