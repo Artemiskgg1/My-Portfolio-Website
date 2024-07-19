@@ -18,16 +18,16 @@ function LeftSection() {
               </h1>
               <div className="flex w-full">
                 <div className="flex gap-x-1 text-xs my-4">
-                  <p className="bg-black text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold">
+                  <p className="bg-black-100 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold">
                     NextJS
                   </p>
-                  <p className="bg-black-200 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold">
+                  <p className="bg-black-100 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold">
                     Tensorflow
                   </p>
-                  <p className="bg-black-200 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold">
+                  <p className="bg-black-100 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold">
                     NodeJS
                   </p>
-                  <p className="bg-black-200 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold shrink-0">
+                  <p className="bg-black-100 text-slate-200 rounded-md px-2 h-5 flex items-center justify-center text-[11px] font-RubikBold shrink-0">
                     Drizzle
                   </p>
                 </div>
