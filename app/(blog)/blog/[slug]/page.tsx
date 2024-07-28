@@ -37,7 +37,7 @@ export default async function BlogArticle({
         width={800}
         height={800}
       />
-      <div className="mt-16 prose prose-blue prose-xl prose-invert">
+      <div className="mt-16 prose prose-blue prose-lg prose-invert prose-li:marker:text-primary prose-a:text-primary">
         <PortableText value={data.content} />
       </div>
     </div>
