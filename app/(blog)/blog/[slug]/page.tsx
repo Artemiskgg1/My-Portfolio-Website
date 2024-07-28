@@ -23,14 +23,14 @@ export default async function BlogArticle({
 }) {
   const data: fullBlog = await getData(params.slug);
   return (
-    <div className="blog w-[60rem] z-20 md:ml-9 h-full overflow-y-auto mr-[2rem]">
+    <div className="blog w-[60rem] z-20 md:ml-9 h-full overflow-y-auto mr-[2rem] p-10">
       <h1>
         <span className=" block mt-2 text-3xl text-center leading-8 tracking-tight sm:text-4xl md:mr-[6rem]">
           {data.title}
         </span>
       </h1>
       <Image
-        className="rounded-lg mt-8 border"
+        className="rounded-lg mt-8 border h-[20rem]  "
         src={urlFor(data.titleImage).url()}
         alt="Title-img"
         priority
