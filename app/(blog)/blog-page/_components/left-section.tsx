@@ -1,7 +1,5 @@
 "use client";
-import { SiAdobe } from "react-icons/si";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
 import { juliusSansOne } from "@/app/components/font";
 
 function LeftSection() {
@@ -38,7 +36,7 @@ function LeftSection() {
             <h2 className="my-2 font-bold">Bio</h2>
             <p className="text-[12px] my-3">
               A Passionate Software Developer from India 🇮🇳
-              <br /> Lost in the mystique of a piano's melody 🎹
+              <br /> Lost in the mystique of a piano&apos;s melody 🎹
             </p>
             <div className="border border-[#282828] text-slate-200" />
             <div>
