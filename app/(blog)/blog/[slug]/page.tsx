@@ -8,8 +8,8 @@ async function getData(slug: string) {
     *[_type == 'blog' && slug.current == '${slug}'] {
       "currentSlug":slug.current,
       title,
-      content,
-      titleImage
+        content,
+        titleImage
     }[0]
   `;
   const data = await client.fetch(query);
