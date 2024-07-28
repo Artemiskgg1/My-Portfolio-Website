@@ -4,16 +4,15 @@ import { client, urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { PiCodeThin } from "react-icons/pi";
 
 async function getData() {
   const query = `
-  *[_type == 'blog'] | order(_createdAt desc){
-    title,
-    smallDescription,
-    "currentSlug":slug.current,
-    titleImage
-  }`;
+    *[_type == 'blog'] | order(_createdAt desc){
+      title,
+      smallDescription,
+      "currentSlug":slug.current,
+      titleImage
+    }`;
   const data: simpleBlogCard[] = await client.fetch(query);
   return data;
 }
