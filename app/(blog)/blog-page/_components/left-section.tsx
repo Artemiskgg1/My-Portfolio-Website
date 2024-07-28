@@ -52,7 +52,7 @@ function LeftSection() {
                   </div>
                 </div>
                 <small className="text-[9px] text-slate-200">
-                  MAY 2024 - current
+                  MAY 2024 - JULY 2024
                 </small>
               </div>
               <div className="my-3 flex justify-between">
@@ -67,7 +67,7 @@ function LeftSection() {
                   </div>
                 </div>
                 <small className="text-[9px] text-slate-200">
-                  MAY 2024 - current
+                  MAY 2024 - JULY 2024
                 </small>
               </div>
             </div>
