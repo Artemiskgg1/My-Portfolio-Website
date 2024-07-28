@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function Github() {
   return (
     <motion.div
-      className="md:flex flex-col items-center justify-center pb-10 hidden"
+      className="md:flex flex-col items-center justify-center pb-10 hidden mt-10"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
