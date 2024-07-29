@@ -10,6 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Abha Ghildiyal",
   description: "Personal Portfolio of Abha Ghildiyal",
+  icons: [
+    {
+      url: "/artemis-logo.png",
+      href: "/artemis-logo.png ",
+    },
+  ],
 };
 
 export default function RootLayout({
