@@ -33,7 +33,7 @@ export default function NavBar() {
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
-      className={`fixed h-[11.5rem] w-screen top-0 left-0  z-50 transition-all ${
+      className={`fixed md:h-[11.5rem] h-[9.5rem] w-screen top-0 left-0  z-50 transition-all ${
         isScrolled ? "bg-opacity-90 bg-black-100" : "bg-opacity-10"
       }`}
     >
