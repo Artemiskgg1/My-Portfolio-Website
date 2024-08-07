@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-
+import { juliusSansOne } from "@/app/components/font";
 const links = [
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog-page" },
@@ -32,7 +32,7 @@ export default function NavLinks() {
           })}
         >
           <p
-            className={`md:m-4 m-1 md:text-3xl text-[1.1rem] hover:text-sky-300 mt-7`}
+            className={`${juliusSansOne.className} md:m-4 m-1 md:text-3xl text-[1.1rem] hover:text-sky-300 mt-7`}
           >
             {link.name}
           </p>
