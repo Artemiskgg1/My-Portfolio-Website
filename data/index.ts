@@ -11,10 +11,10 @@ export const gridItems = [
     title:
       "Hey there! I'm Abha, a curious mind with a passion for cracking problems.",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] ",
+    imgClassName: "w-full h-full inset-0 bg-black opacity-40",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/guitar-n-piano.jpg",
     spareImg: "",
   },
   {

@@ -19,12 +19,11 @@ const Hero = () => {
             words="Bridging Imagination into Seamless Experiences"
           />
           <div className="mt-8">
-            {/* Replace 'your-gif.gif' with the path to your actual GIF file */}
             <Image
               src="/down-arrow.gif"
               alt="Your GIF"
-              width={40} // Adjust width as per your design
-              height={30} // Adjust height as per your design
+              width={40}
+              height={30}
             />
           </div>
         </div>
