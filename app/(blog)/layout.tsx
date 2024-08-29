@@ -1,5 +1,3 @@
-// import LeftSection from "./blog-page/_components/left-section";
-
 import LeftSection from "./blog-page/_components/left-section";
 
 export default function BlogLayout({
