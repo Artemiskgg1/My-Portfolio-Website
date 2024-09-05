@@ -6,7 +6,9 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-black-100 h-screen flex w-full bg-zinc-95">
+    <div className="bg-transparent h-screen flex w-full relative">
+      {" "}
+      {/* Reduced to z-10 */}
       <div className="flex items-center ml-10 mb-[12rem]">
         <LeftSection />
       </div>
