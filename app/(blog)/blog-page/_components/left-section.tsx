@@ -5,7 +5,7 @@ import { juliusSansOne } from "@/app/components/font";
 function LeftSection() {
   return (
     <div>
-      <div className="hidden md:block bg-black-100 w-full md:w-80 h-fit sticky top-5 ml-7">
+      <div className="hidden md:block w-full md:w-80 h-fit sticky top-5 ml-7">
         <div className="md:w-80 w-full p-3 rounded-2xl h-full bg-black-200 shadow-md">
           <div className="flex">
             <div className="w-full relative">
