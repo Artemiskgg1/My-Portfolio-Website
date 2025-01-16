@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { juliusSansOne } from "@/app/components/font";
 const links = [
   { name: "Projects", href: "/projects" },
-  { name: "Blog", href: "/blog-page" },
+  { name: "Blog", href: "/blogs" },
 ];
 
 export default function NavLinks() {
@@ -15,7 +15,7 @@ export default function NavLinks() {
     if (path === "/projects") {
       return pathname === path;
     }
-    if (path === "/blog-page") {
+    if (path === "/blogs") {
       return pathname.startsWith("/blog");
     }
     return false;
