@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import { Spotlight } from "@/components/ui/spotlight";
 import BottomNav from "./components/bottom-nav";
+import Loader from "@/components/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,8 +30,8 @@ export default function RootLayout({
         className={`${inter.className} bg-black-100 text-zinc-200 pt-36`}
         style={{ overflowX: "hidden" }}
       >
+        <Loader />
         <div className="relative w-full h-full">
-          {/* Background grid layer */}
           <div className="absolute inset-0 z-0 w-full bg-black-100 bg-grid-white/[0.03]">
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
           </div>
@@ -49,7 +50,6 @@ export default function RootLayout({
             />
           </div>
 
-          {/* Main content */}
           <div className="relative z-20">
             <Navbar />
             <main>{children}</main>

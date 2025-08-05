@@ -8,7 +8,6 @@ export default function BlogLayout({
   return (
     <div className="bg-transparent h-screen flex w-full relative">
       {" "}
-      {/* Reduced to z-10 */}
       <div className="flex items-center ml-10 mb-[12rem]">
         <LeftSection />
       </div>

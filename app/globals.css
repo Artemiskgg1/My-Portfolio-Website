@@ -78,6 +78,19 @@
   }
 }
 
+@keyframes spin-slower {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slower {
+  animation: spin-slower 3s linear infinite;
+}
+
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
