@@ -166,6 +166,9 @@ const config = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         "spin-slower": "spin 5s linear infinite",
       },
+      fontFamily: {
+        unigeo: ["unigeo", "sans-serif"],
+      },
     },
   },
   plugins: [

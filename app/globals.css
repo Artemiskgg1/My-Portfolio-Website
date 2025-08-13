@@ -76,6 +76,10 @@
   button {
     @apply active:outline-none;
   }
+  @font-face {
+    font-family: "unigeo";
+    src: url("/fonts/Unigeo.ttf") format("opentype");
+  }
 }
 
 @keyframes spin-slower {

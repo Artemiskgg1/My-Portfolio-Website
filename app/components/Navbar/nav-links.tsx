@@ -31,9 +31,7 @@ export default function NavLinks() {
             "text-sky-300": isActive(link.href),
           })}
         >
-          <p
-            className={`${juliusSansOne.className} md:m-4 m-1 md:text-3xl text-[1.1rem] hover:text-sky-300 mt-7`}
-          >
+          <p className=" font-unigeo md:m-4 m-1 md:text-3xl text-[1.1rem] hover:text-sky-300 mt-7">
             {link.name}
           </p>
         </Link>
