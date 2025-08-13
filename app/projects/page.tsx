@@ -15,17 +15,16 @@ import {
   titleVariants,
 } from "@/animations/projectAnimations";
 
-// Updated number variants with bigger hover effect and darker appearance
 const numberVariants = {
   initial: {
-    opacity: 0.7, // Made darker (was 0.3)
+    opacity: 0.7,
     scale: 1,
     y: 0,
   },
   hover: {
     opacity: 1,
-    scale: 1.3, // Make it bigger on hover
-    y: -10, // Slight upward movement
+    scale: 1.3,
+    y: -10,
   },
   exit: {
     opacity: 0,
@@ -39,12 +38,23 @@ export default function ProjectStrips() {
 
   return (
     <motion.div
-      className="px-16 mt-20"
+      className="px-4 sm:px-8 md:px-16 mt-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="flex h-[500px] gap-[2px]">
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-3xl sm:text-4xl md:text-5xl font-bold font-unigeo mb-10 text-white"
+      >
+        Things I’ve Built
+      </motion.h1>
+
+      {/* Project Strips */}
+      <div className="flex flex-col md:flex-row md:h-[500px] gap-[2px]">
         {projects.map((project, i) => {
           const isExpanded = expandedIndex === i;
 
@@ -58,11 +68,8 @@ export default function ProjectStrips() {
               whileHover="hover"
               className={`relative group overflow-hidden cursor-pointer transition-all duration-500 ${
                 isExpanded ? "flex-[2]" : "flex-[0.7]"
-              }`}
+              } ${isExpanded ? "min-h-[300px]" : "min-h-[200px]"} md:min-h-0`}
               onClick={() => setExpandedIndex(isExpanded ? null : i)}
-              onHoverStart={() => {
-                // Reset and replay animations on every hover
-              }}
             >
               <motion.div
                 variants={glowVariants}
@@ -100,7 +107,7 @@ export default function ProjectStrips() {
                 initial="initial"
                 animate="animate"
                 whileHover={!isExpanded ? "hover" : "expanded"}
-                className={`absolute font-unigeo text-white text-lg font-semibold left-1/2 -translate-x-1/2 z-10 ${
+                className={`absolute font-unigeo text-white text-lg sm:text-xl font-semibold left-1/2 -translate-x-1/2 z-10 ${
                   isExpanded ? "top-8" : "top-1/2 -translate-y-1/2"
                 }`}
               >
@@ -114,7 +121,7 @@ export default function ProjectStrips() {
                     initial="initial"
                     whileHover="hover"
                     exit="exit"
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-8xl font-bold z-0 pointer-events-none transition-all duration-300"
+                    className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 text-white text-5xl sm:text-8xl font-bold z-0 pointer-events-none transition-all duration-300"
                   >
                     {i + 1}
                   </motion.span>
@@ -128,11 +135,11 @@ export default function ProjectStrips() {
                     initial="initial"
                     animate="animate"
                     exit="exit"
-                    className="absolute inset-0 flex flex-col justify-center items-center px-6 text-white z-10"
+                    className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-6 text-white z-10"
                   >
                     <div className="text-center max-w-xs">
                       <motion.p
-                        className="mb-6 text-sm leading-relaxed"
+                        className="mb-6 text-xs sm:text-sm leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.5 }}
@@ -149,7 +156,7 @@ export default function ProjectStrips() {
                           initial="initial"
                           whileHover="hover"
                           whileTap="tap"
-                          className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm hover:bg-white/30 transition-colors duration-300 border border-white/30"
+                          className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-xs sm:text-sm hover:bg-white/30 transition-colors duration-300 border border-white/30"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <motion.span
@@ -164,21 +171,21 @@ export default function ProjectStrips() {
                             whileHover={{ rotate: 45 }}
                             transition={{ duration: 0.2 }}
                           >
-                            <ExternalLink size={16} />
+                            <ExternalLink size={14} />
                           </motion.div>
                         </motion.a>
                       )}
 
                       {project.link === "#" && (
                         <motion.div
-                          className="inline-flex items-center gap-2 bg-gray-500/40 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-gray-400/30 cursor-not-allowed"
+                          className="inline-flex items-center gap-2 bg-gray-500/40 backdrop-blur-sm px-4 py-2 rounded-full text-xs sm:text-sm border border-gray-400/30 cursor-not-allowed"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.4 }}
                         >
                           Coming Soon
                           <motion.div
-                            className="w-4 h-4 rounded-full bg-yellow-400"
+                            className="w-3 h-3 rounded-full bg-yellow-400"
                             animate={{
                               scale: [1, 1.2, 1],
                               opacity: [1, 0.7, 1],
@@ -196,6 +203,7 @@ export default function ProjectStrips() {
                 )}
               </AnimatePresence>
 
+              {/* Gradient Shine */}
               <motion.div
                 className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${
                   isExpanded ? "opacity-100" : ""
@@ -221,7 +229,7 @@ export default function ProjectStrips() {
                 <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10"></div>
               </motion.div>
 
-              {/* Floating particles */}
+              {/* Floating Particles */}
               <AnimatePresence>
                 {isExpanded && (
                   <>
@@ -259,8 +267,9 @@ export default function ProjectStrips() {
         })}
       </div>
 
+      {/* Github Section */}
       <motion.div
-        className="max-w-6xl mt-[8rem] mx-auto px-8"
+        className="max-w-6xl mt-16 mx-auto px-4 sm:px-8"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}
