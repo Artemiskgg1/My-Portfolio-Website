@@ -48,9 +48,9 @@ export default function ProjectStrips() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center text-3xl sm:text-4xl md:text-5xl font-bold font-unigeo mb-10 text-white"
+        className="text-center text-3xl sm:text-4xl md:text-5xl font-unigeo mb-10 text-white"
       >
-        Things I’ve Built
+        Things I Have Built
       </motion.h1>
 
       {/* Project Strips */}
