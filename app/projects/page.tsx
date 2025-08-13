@@ -38,7 +38,7 @@ export default function ProjectStrips() {
 
   return (
     <motion.div
-      className="px-4 sm:px-8 md:px-16 mt-12"
+      className="px-4 sm:px-8 md:px-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
