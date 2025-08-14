@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowBigRightDash, Github } from "lucide-react";
+import { ArrowBigRightDash, Music, Music2 } from "lucide-react";
 
 export const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -13,8 +13,10 @@ export const Navbar = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const hoverSoundRef = useRef<HTMLAudioElement | null>(null);
+  const musicRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -42,6 +44,10 @@ export const Navbar = () => {
       if (!hoverSoundRef.current) {
         hoverSoundRef.current = new Audio("/sounds/button-hover-click.mp3");
       }
+      if (!musicRef.current) {
+        musicRef.current = new Audio("/sounds/revelation.mp3");
+        musicRef.current.loop = true;
+      }
       setSoundEnabled(true);
       document.removeEventListener("click", handleClickToEnableSound);
     };
@@ -67,11 +73,6 @@ export const Navbar = () => {
       href: "/projects",
       icon: <ArrowBigRightDash size={14} className="inline ml-1 mb-0.5" />,
     },
-    {
-      name: "GITHUB",
-      href: "https://github.com/artemiskgg1",
-      icon: <Github size={14} className="inline ml-1 mb-0.5" />,
-    },
   ];
 
   const playHoverSound = () => {
@@ -79,6 +80,16 @@ export const Navbar = () => {
       hoverSoundRef.current.currentTime = 0;
       hoverSoundRef.current.play();
     }
+  };
+
+  const toggleMusic = () => {
+    if (!musicRef.current) return;
+    if (isPlaying) {
+      musicRef.current.pause();
+    } else {
+      musicRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
   };
 
   if (!isMounted) return null;
@@ -105,7 +116,7 @@ export const Navbar = () => {
               alt="Artemis Logo"
               width={27}
               height={27}
-              className="object-contain "
+              className="object-contain"
               priority
             />
           </Link>
@@ -117,7 +128,7 @@ export const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  target={item.name === "GITHUB" ? "_blank" : "_self"}
+                  target="_self"
                   onMouseEnter={playHoverSound}
                   className={`text-xs font-bold tracking-wider px-3 py-2 rounded-full transition-all duration-300 flex items-center gap-1 ${
                     isAtTop
@@ -129,6 +140,14 @@ export const Navbar = () => {
                   {item.icon && item.icon}
                 </a>
               ))}
+
+              {/* Music Toggle Button */}
+              <button
+                onClick={toggleMusic}
+                className="p-2 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-white"
+              >
+                {isPlaying ? <Music2 size={18} /> : <Music size={18} />}
+              </button>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -160,7 +179,7 @@ export const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                target={item.name === "GITHUB" ? "_blank" : "_self"}
+                target="_self"
                 onMouseEnter={playHoverSound}
                 className="text-sm font-medium tracking-wider px-3 py-2 rounded-full transition-colors duration-300 flex items-center gap-1 
                     text-white/70 hover:text-black hover:bg-white"
@@ -169,6 +188,15 @@ export const Navbar = () => {
                 {item.icon && item.icon}
               </a>
             ))}
+
+            {/* Mobile Music Toggle */}
+            <button
+              onClick={toggleMusic}
+              className="p-2 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-white flex items-center gap-2"
+            >
+              {isPlaying ? <Music2 size={18} /> : <Music size={18} />}
+              {isPlaying ? "Pause Music" : "Play Music"}
+            </button>
           </div>
         )}
       </div>
