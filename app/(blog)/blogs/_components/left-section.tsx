@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { juliusSansOne } from "@/app/components/font";
+import { juliusSansOne } from "@/app/lib/font";
 
 function LeftSection() {
   return (

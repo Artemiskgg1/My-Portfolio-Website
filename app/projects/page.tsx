@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Github from "../components/Github";
+import Github from "../../components/Github";
 import { projects } from "@/data/projects";
 import {
   buttonVariants,

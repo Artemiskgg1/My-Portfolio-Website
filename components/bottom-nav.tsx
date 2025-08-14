@@ -1,5 +1,5 @@
 "use client";
-import { juliusSansOne } from "@/app/components/font";
+import { juliusSansOne } from "@/app/lib/font";
 import Link from "next/link";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { AiFillGithub } from "react-icons/ai";
